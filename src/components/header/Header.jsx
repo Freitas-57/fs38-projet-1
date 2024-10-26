@@ -1,5 +1,8 @@
 import Logo from "../../assets/img/logo/logo.png";
 import style from "./header.module.css";
+import SearchIcon from "../icons/SearchIcon";
+import Cart from "../icons/Cart";
+
 
 function Header() {
   return (
@@ -10,7 +13,7 @@ function Header() {
         </div>
 
         <div className="search">
-          <div className={style.input}>
+          <div className={style.search}>
             <input
               className={style.inputSearch}
               type="text"
@@ -18,6 +21,9 @@ function Header() {
               id="search"
               placeholder="Pesquisar produto..."
             />
+            <i className={style.iconSearch}>
+              <SearchIcon />
+            </i>
           </div>
         </div>
 
@@ -28,9 +34,10 @@ function Header() {
           <a className={style.btnLogin} href="">
             Entrar
           </a>
-          <a className="cart" href="">
-            Cart
-          </a>
+          <div className>
+            <Cart />
+            <span>2</span>
+          </div>
         </div>
       </header>
     </>
