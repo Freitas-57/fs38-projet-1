@@ -1,13 +1,15 @@
-import ProductBadge from "../product-card/product-badge/ProductBadge";
+import style from "./productCardDestack.module.css";
 
-function ProductCardDestack({ title, img }) {
+function ProductCardDestack({ title, image, discount }) {
   return (
     <>
-      <div>
-        <ProductBadge />
+      <div className= {style.productCardDestack}>
+        < span className= {style.badge} >
+          {discount}
+        </span>
         <h3> {title} </h3>
-        <button></button>
-        <img src={img} alt="" />
+        <button>Comprar</button>
+        <img src={image} alt="" />
       </div>
     </>
   );
